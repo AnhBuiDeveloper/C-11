@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace GenericAttributes.Current
 {
-    internal class NewCustomer
+    internal class NewCustomer : Entity
     {
         [Required(ErrorMessage = "Name is required")]
         [GenericUniqueAttribute<CustomerDataContext, Customer>(propertyName: "Name", ErrorMessage = "Name is duplicate")]

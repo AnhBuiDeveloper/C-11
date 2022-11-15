@@ -1,6 +1,6 @@
 ﻿namespace GenericAttributes.Entities
 {
-    internal class CustomerDataContext
+    internal class CustomerDataContext : DataContext
     {
         private readonly List<Customer> customers = new()
         {

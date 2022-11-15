@@ -1,11 +1,13 @@
-﻿using GenericAttributes.Entities;
+﻿using GenericAttributes.Current;
+using GenericAttributes.Entities;
 using System.ComponentModel.DataAnnotations;
-using System.Linq.Expressions;
 using System.Reflection;
 
 namespace GenericAttributes.New
 {
     internal class GenericUniqueAttribute<TDataContext, TEntity> : ValidationAttribute
+        where TDataContext : DataContext
+        where TEntity : Entity
     {
         public Type DataContextType { get; private set; }
         public Type EntityType { get; private set; }
